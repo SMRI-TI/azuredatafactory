@@ -1,0 +1,17 @@
+you can use it for audio and video streaming
+
+Reading/writing logs
+store data for backup and restore, disaster recovery and archives
+it can be used for analysis, on premisis hybrid and hosted services.
+
+BLOB supports 190 terabyte storage (per container)
+
+SDK: Datalibrary
+CLI: AzCopy, explorer, services (ADF), BLOB Fuse, Import/export
+
+Storage types
+BLOB, (gen1, Gen2 (azure Data lake service))
+
+ACL: Access control list
+
+
