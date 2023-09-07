@@ -11,6 +11,22 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
 		},
+		"AzureBlobStorageDestinationURL_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageDestinationURL'"
+		},
+		"HttpServerAdf_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'HttpServerAdf'"
+		},
+		"HttpServerAdf_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://atlas.microsoft.com/weather/currentConditions/json?api-version=1.0&query=47.60357,-122.32945&subscription-key=RC9l6uyUWjmZAQWlQFZEgWV4F2oBZzg1HmC7lhNPyGw"
+		},
+		"HttpServerAdf_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Smriti"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -40,6 +56,18 @@
 					},
 					"AzureBlobStorage1_connectionString": {
 						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureBlobStorageDestinationURL_connectionString": {
+						"value": "[parameters('AzureBlobStorageDestinationURL_connectionString')]"
+					},
+					"HttpServerAdf_password": {
+						"value": "[parameters('HttpServerAdf_password')]"
+					},
+					"HttpServerAdf_properties_typeProperties_url": {
+						"value": "[parameters('HttpServerAdf_properties_typeProperties_url')]"
+					},
+					"HttpServerAdf_properties_typeProperties_userName": {
+						"value": "[parameters('HttpServerAdf_properties_typeProperties_userName')]"
 					}
 				}
 			},
