@@ -44,7 +44,6 @@
 						"storeSettings": {
 							"type": "HttpReadSettings",
 							"requestMethod": "GET",
-							"additionalHeaders": "Authorisation: Basic\n@{base64(activity('Web1').output.value)}",
 							"requestTimeout": ""
 						},
 						"formatSettings": {
