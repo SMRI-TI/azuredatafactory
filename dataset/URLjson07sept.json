@@ -1,0 +1,17 @@
+{
+	"name": "URLjson07sept",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HttpServerAdf",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			}
+		},
+		"schema": {}
+	}
+}
