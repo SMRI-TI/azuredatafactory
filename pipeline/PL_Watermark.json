@@ -79,7 +79,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select * from data_source_table where LastModifytime > '@{activity('LookupOldWatermark').output.firstRow.WatermarkValue}' and\nLastModifytime<=@activity('LookupNewWatermark').output.firstRow.NewWatermarkValue}'",
+						"sqlReaderQuery": "select * from data_source_table where LastModifytime>'@(activity(LookupOldWatermark).output.firstRow.WatermarkValue)' and LastModifytime<='@(activity(LookupNewWatermark).output.firstRow.NewWatermarkValue)' ",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -106,7 +106,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_Watermark",
+						"referenceName": "AzureSqlTableINPUT",
 						"type": "DatasetReference"
 					}
 				],
@@ -140,11 +140,11 @@
 					"storedProcedureName": "[dbo].[usp_write_watermark]",
 					"storedProcedureParameters": {
 						"LastModifiedtime": {
-							"value": "",
+							"value": "@(activity(LookupOldWatermark).output.firstRow.WatermarkValue)'",
 							"type": "DateTime"
 						},
 						"TableName": {
-							"value": "",
+							"value": "@(activity(LookupNewWatermark).output.firstRow.NewWatermarkValue)' ",
 							"type": "String"
 						}
 					}
