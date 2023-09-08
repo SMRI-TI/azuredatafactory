@@ -1,5 +1,5 @@
 {
-	"name": "LookupNewWatermark",
+	"name": "LookupNewDST",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_SQL",
